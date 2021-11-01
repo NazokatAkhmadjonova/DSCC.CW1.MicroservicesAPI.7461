@@ -18,7 +18,7 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Repository
 			_dbContext = dbContext;
 		}
 
-		public void DeleteMedicines(int medicineId)
+		public void DeleteMedicine(int medicineId)
 		{
 			var medicine = _dbContext.Medicines.Find(medicineId);
 			_dbContext.Medicines.Remove(medicine);

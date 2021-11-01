@@ -10,7 +10,7 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Repository
 	{
 		void InsertMedicine(Medicine medicine);
 		void UpdateMedicine(Medicine medicine);
-		void DeleteMedicines(int medicineId);
+		void DeleteMedicine(int medicineId);
 		Medicine GetMedicineById(int id);
 		IEnumerable<Medicine> GetMedicines();
 	}
