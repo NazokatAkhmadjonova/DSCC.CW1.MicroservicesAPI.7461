@@ -13,7 +13,7 @@ namespace DSCC.CW1.MicroservicesAPI._7461.DbContexts
 		{
 
 		}
-		public DbSet<MedicineContext> Medicines { get; set; }
+		public DbSet<Medicine> Medicines { get; set; }
 		public DbSet<Pharmacy> Pharmacies { get; set; }
 
 	}

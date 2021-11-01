@@ -25,18 +25,16 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Repository
 			Save();
 		}
 
-		//add implementation
-
-		public Medicine GetMedicineById(int id)
+		public Medicine GetMedicineById(int medicineId)
 		{
-			throw new NotImplementedException();
+			var med = _dbContext.Medicines.Find(medicineId);
+			_dbContext.Entry(med).Reference(m => m.Pharmacy).Load();
+			return med;
 		}
-
-		//add implementation
 
 		public IEnumerable<Medicine> GetMedicines()
 		{
-			throw new NotImplementedException();
+			return _dbContext.Medicines.Include(m => m.Pharmacy).ToList();
 		}
 
 		public void InsertMedicine(Medicine medicine)
