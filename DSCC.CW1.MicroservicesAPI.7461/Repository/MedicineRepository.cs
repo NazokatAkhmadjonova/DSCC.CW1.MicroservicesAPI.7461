@@ -48,6 +48,7 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Repository
 			_dbContext.Entry(medicine).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
 			Save();
 		}
+
 		private void Save()
 		{
 			_dbContext.SaveChanges();

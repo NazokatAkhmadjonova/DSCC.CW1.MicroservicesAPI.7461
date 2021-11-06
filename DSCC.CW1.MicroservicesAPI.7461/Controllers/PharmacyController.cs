@@ -33,7 +33,7 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Controllers
 			}
 
 			// GET api/<MedicineController>/5
-			[HttpGet("{id}", Name = "Get")]
+			[HttpGet("{id}", Name = "GetPharmacy")]
 			public IActionResult Get(int id)
 			{
 				var pharmacies = _pharmacyRepository.GetPharmacies();

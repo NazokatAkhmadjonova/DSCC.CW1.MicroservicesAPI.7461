@@ -32,7 +32,9 @@ namespace DSCC.CW1.MicroservicesAPI._7461
 			services.AddMvc();
 			services.AddDbContext<DbContexts.MedicineContext>(o =>
 				o.UseSqlServer(Configuration.GetConnectionString("DbPharmacyStore_7461")));
-
+			services.AddTransient<IMedicineRepository, MedicineRepository>();
+			services.AddTransient<IPharmacyRepository, PharmacyRepository>();
+			services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "DSCC.CW1.MicroservicesAPI._7461", Version = "v1" }));
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
