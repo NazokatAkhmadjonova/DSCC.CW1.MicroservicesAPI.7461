@@ -8,7 +8,7 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Repository
 {
 	public interface IPharmacyRepository
 	{
-		void InsertPharmacy(Pharmacy pharmacy);
+		void AddPharmacy(Pharmacy pharmacy);
 		void UpdatePharmacy(Pharmacy pharmacy);
 		void DeletePharmacy(int medicineId);
 		Pharmacy GetPharmacyById(int id);

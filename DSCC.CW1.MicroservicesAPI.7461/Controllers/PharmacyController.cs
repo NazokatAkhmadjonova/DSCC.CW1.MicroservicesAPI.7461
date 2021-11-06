@@ -36,8 +36,8 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Controllers
 			[HttpGet("{id}", Name = "GetPharmacy")]
 			public IActionResult Get(int id)
 			{
-				var pharmacies = _pharmacyRepository.GetPharmacies();
-				return new OkObjectResult(pharmacies);
+				var pharmacy = _pharmacyRepository.GetPharmacyById(id);
+				return new OkObjectResult(pharmacy);
 			}
 
 			// POST api/<MedicineController>
@@ -46,7 +46,7 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Controllers
 			{
 				using (var scope = new TransactionScope())
 				{
-					_pharmacyRepository.InsertPharmacy(pharmacy);
+					_pharmacyRepository.AddPharmacy(pharmacy);
 					scope.Complete();
 					return CreatedAtAction(nameof(Get), new { id = pharmacy.Id }, pharmacy);
 				}

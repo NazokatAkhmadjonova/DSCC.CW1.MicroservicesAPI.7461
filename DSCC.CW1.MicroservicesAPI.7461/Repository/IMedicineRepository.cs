@@ -8,7 +8,7 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Repository
 {
 	public interface IMedicineRepository
 	{
-		void InsertMedicine(Medicine medicine);
+		void AddMedicine(Medicine medicine);
 		void UpdateMedicine(Medicine medicine);
 		void DeleteMedicine(int medicineId);
 		Medicine GetMedicineById(int id);

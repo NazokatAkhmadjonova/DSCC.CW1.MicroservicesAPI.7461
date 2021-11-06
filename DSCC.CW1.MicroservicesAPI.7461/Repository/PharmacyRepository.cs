@@ -26,17 +26,18 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Repository
 
 		public IEnumerable<Pharmacy> GetPharmacies()
 		{
-			return _dbContext.Pharmacies.Include(p => p.Medicine).ToList();
+			return _dbContext.Pharmacies.ToList();
+			//return _dbContext.Pharmacies.Include(p => p.Medicine).ToList();
 		}
 
 		public Pharmacy GetPharmacyById(int pharmacyId)
 		{
 			var phar = _dbContext.Pharmacies.Find(pharmacyId);
-			_dbContext.Entry(phar).Reference(p => p.Medicine).Load();
+			//_dbContext.Entry(phar).Reference(p => p.Medicine).Load();
 			return phar;
 		}
 
-		public void InsertPharmacy(Pharmacy pharmacy)
+		public void AddPharmacy(Pharmacy pharmacy)
 		{
 			_dbContext.Add(pharmacy);
 			Save();

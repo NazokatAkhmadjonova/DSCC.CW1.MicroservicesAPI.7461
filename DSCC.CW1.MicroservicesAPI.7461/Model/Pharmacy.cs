@@ -12,6 +12,5 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Model
 		public string City { get; set; }
 		public string District { get; set; }
 		public string Street { get; set; }
-		public object Medicine { get; internal set; }
 	}
 }
