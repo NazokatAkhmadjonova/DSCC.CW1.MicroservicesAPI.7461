@@ -31,7 +31,7 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Controllers
 			//return new string[] { "value1",  "value2" };
 		}
 
-		// GET api/<MedicineController>/5
+		// GET api/<MedicineController>
 		[HttpGet("{id}", Name = "GetMedicine")]
 		public IActionResult Get(int id)
 		{
@@ -52,7 +52,7 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Controllers
 
 		}
 
-		// PUT api/<MedicineController>/5
+		// PUT api/<MedicineController>
 		[HttpPut("{id}")]
 		public IActionResult Put(int Id,
 						   [FromBody] Medicine medicine)
@@ -69,7 +69,7 @@ namespace DSCC.CW1.MicroservicesAPI._7461.Controllers
 			return new NoContentResult();
 		}
 
-		// DELETE api/<MedicineController>/5
+		// DELETE api/<MedicineController>
 		[HttpDelete("{id}")]
 		public IActionResult Delete(int id)
 		{

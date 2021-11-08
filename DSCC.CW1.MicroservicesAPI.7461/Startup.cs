@@ -40,11 +40,17 @@ namespace DSCC.CW1.MicroservicesAPI._7461
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
-			if (env.IsDevelopment())
+			if (env.IsDevelopment() || env.IsProduction())
 			{
 				app.UseDeveloperExceptionPage();
 				app.UseSwagger();
-				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DSCC.CW1.MicroservicesAPI._7461 v1"));
+				//app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DSCC.CW1.MicroservicesAPI._7461 v1"));
+				app.UseSwaggerUI(c =>
+				{
+					string swaggerJsonBasePath = string.IsNullOrWhiteSpace(c.RoutePrefix) ? "." : "..";
+					c.SwaggerEndpoint($"{swaggerJsonBasePath}/swagger/v1/swagger.json", "My API");
+
+				});
 			}
 
 			app.UseHttpsRedirection();

@@ -1,0 +1,26 @@
+
+{
+    "comment" : "This file is used to help set default values when using the dotnet CLI extension Amazon.ElasticBeanstalk.Tools. For more information run \"dotnet eb --help\" from the project root.",
+    "profile" : "MicroservicesAPI7461",
+    "region"  : "us-east-2",
+    "application" : "DSCCCW1MicroservicesAPI7461",
+    "environment" : "DSCCCW1MicroservicesAPI7461-dev",
+    "cname"       : "dscccw1microservicesapi7461-dev",
+    "solution-stack" : "64bit Amazon Linux 2 v2.2.7 running .NET Core",
+    "environment-type" : "LoadBalanced",
+    "instance-profile" : "aws-elasticbeanstalk-ec2-role",
+    "service-role"     : "aws-elasticbeanstalk-service-role",
+    "health-check-url" : "/",
+    "instance-type"    : "t3a.medium",
+    "key-pair"         : "7461KeyPair",
+    "iis-website"      : "Default Web Site",
+    "app-path"         : "/",
+    "enable-xray"      : false,
+    "configuration"    : "Debug",
+    "framework"        : "net5.0",
+    "self-contained"   : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-63a7b52e,sg-0265f9011454509f0\";\"aws:ec2:vpc,Subnets\"=\"subnet-68e47803\";\"aws:ec2:vpc,ELBSubnets\"=\"subnet-68e47803,subnet-eafe3497,subnet-3ba79577\"",
+    "loadbalancer-type"    : "application",
+    "proxy-server"         : "nginx"
+}
